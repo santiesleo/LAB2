@@ -27,7 +27,7 @@ public class Main {
             lista.print();
             System.out.println("");
             lista.askQuestion(String.valueOf(i+1));
-            System.out.println("Ingrese \"1\" para para pasar la pregunta\nIngrese su respuesta: ");
+            System.out.println("Ingrese \"PASO\" para pasar la pregunta\nIngrese su respuesta: ");
             String answer = sc.next();
             if(answer.equalsIgnoreCase("PASO")){
                 questionPass++;

@@ -43,13 +43,15 @@ public class DobleEnlace {
     //Recursividad
     public int score(Node current, int n){
         if(current == null){
-            return 1;
-        }
-        if(current.getStatus() == Status.INCORRECT){
+            return n;
+        }else if(current.getStatus() == Status.INCORRECT){
             System.out.println(current.getQuestion() + " INCORRECTO");
+            n--;
+        }else {
+            System.out.println(current.getQuestion() + " CORRECTO");
+            n++;
         }
-        System.out.println(current.getQuestion() + " CORRECTO");
-        return score(current.getNext(), n + 1);
+        return score(current.getNext(), n);
     }
 
     //Conversión a String
